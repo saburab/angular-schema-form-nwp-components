@@ -1,0 +1,89 @@
+{
+   "schema": {
+      "type":       "object",
+      "title":      "Blog",
+      "properties": {
+         "nwpAccordion": {
+            "icon":            "caret-down",
+            "title":           "modules.objects.components.accordion",
+            "type":            "accordion",
+            "format":          "nwpAccordion",
+            "accordionGroups": [
+               {
+                  "title": "Simple stuff",
+                  "items": []
+               }
+            ],
+            "x-meta":          {
+               "subType": "nwpComponent"
+            }
+         },
+         "nwpHeading":   {
+            "icon":   "header",
+            "title":  "modules.objects.components.heading",
+            "type":   "string",
+            "format": "nwpHeading",
+            "x-meta": {
+               "subType": "nwpComponent"
+            }
+         },
+         "nwpParagraph": {
+            "icon":   "paragraph",
+            "title":  "modules.objects.components.nwpParagraph",
+            "type":   "string",
+            "format": "nwpParagraph",
+            "x-meta": {
+               "subType": "nwpComponent"
+            }
+         },
+         "nwpStripline": {
+            "icon":   "ellipsis-h",
+            "title":  "modules.objects.components.stripline",
+            "type":   "string",
+            "format": "nwpStripline",
+            "x-meta": {
+               "subType": "nwpComponent"
+            }
+         }
+      }
+   },
+   "form":   [
+      {
+         "icon":     "paragraph",
+         "title":    "modules.objects.components.nwpParagraph",
+         "type":     "nwpParagraph",
+         "format":   "nwpParagraph",
+         "x-meta":   {
+            "subType": "nwpComponent"
+         },
+         "key":      "nwpParagraph",
+         "name":     "nwpParagraph",
+         "required": false,
+         "text":     "Hey how r u"
+      },
+      {
+         "icon":     "header",
+         "title":    "modules.objects.components.heading",
+         "type":     "nwpHeading",
+         "format":   "nwpHeading",
+         "x-meta":   {
+            "subType": "nwpComponent"
+         },
+         "key":      "nwpHeading",
+         "name":     "nwpHeading",
+         "required": false,
+         "heading":  "nice heading by nwp"
+      },
+      {
+         "icon":   "ellipsis-h",
+         "title":  "modules.objects.components.stripline",
+         "type":   "nwpStripline",
+         "format": "nwpStripline",
+         "x-meta": {
+            "subType": "nwpComponent"
+         },
+         "key":    "nwpStripline",
+         "name":   "nwpStripline"
+      }
+   ]
+}
