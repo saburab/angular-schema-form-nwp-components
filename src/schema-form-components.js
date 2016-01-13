@@ -83,8 +83,8 @@
          /* nwp accordion */
          var nwpAccordion = function (name, schema, options) {
             if (schema.type === 'accordion' && schema.format === 'nwpAccordion') {
-               if (!schema.defaultAccordionHeading) {
-                  schema.defaultAccordionHeading = defaultAccordionHeading;
+               if (!schema.defaultHeading) {
+                  schema.defaultHeading = defaultAccordionHeading;
                }
 
                var f                                                  = schemaFormProvider.stdFormObj(name, schema, options);
