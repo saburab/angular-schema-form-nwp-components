@@ -3,17 +3,9 @@
 
    ng.module('schemaForm').config(['schemaFormProvider', 'schemaFormDecoratorsProvider', 'sfPathProvider',
       function (schemaFormProvider, schemaFormDecoratorsProvider, sfPathProvider) {
-         var defaultText              = 'Accusata honestatis interesset ne eam, elitr semper dolores has et. Eam ea error invidunt, ne sea nostro commune omittantur. Vix ut electram hendrerit constituam, an sed illud utroque phaedrum, cum sumo vituperatoribus eu. Mel te facer meliore repudiare. Tractatos conclusionemque mei at, sed atqui iudico intellegam ut.',
-             defaultHeading          = 'H3. Netzwerkplan heading',
-             defaultAccordionHeading = 'Netzwerkplan accordion heading';
-
          /* nwp paragraph */
          var nwpParagraph = function (name, schema, options) {
             if (schema.type === 'string' && schema.format === 'nwpParagraph') {
-               if (!schema.defaultText) {
-                  schema.defaultText = defaultText;
-               }
-
                var f                                                  = schemaFormProvider.stdFormObj(name, schema, options);
                f.key                                                  = options.path;
                f.type                                                 = 'nwpParagraph';
@@ -37,10 +29,6 @@
          /* nwp heading */
          var nwpHeading = function (name, schema, options) {
             if (schema.type === 'string' && schema.format === 'nwpHeading') {
-               if (!schema.defaultHeading) {
-                  schema.defaultHeading = defaultHeading;
-               }
-
                var f                                                  = schemaFormProvider.stdFormObj(name, schema, options);
                f.key                                                  = options.path;
                f.type                                                 = 'nwpHeading';
@@ -83,10 +71,6 @@
          /* nwp accordion */
          var nwpAccordion = function (name, schema, options) {
             if (schema.type === 'accordion' && schema.format === 'nwpAccordion') {
-               if (!schema.defaultHeading) {
-                  schema.defaultHeading = defaultAccordionHeading;
-               }
-
                var f                                                  = schemaFormProvider.stdFormObj(name, schema, options);
                f.key                                                  = options.path;
                f.type                                                 = 'nwpAccordion';
@@ -117,7 +101,7 @@
             scope:    true,
             require:  'ngModel',
             link:     function (scope, element, attrs, ngModel) {
-               scope.text = scope.form && (scope.form.text || scope.form.schema && scope.form.schema.defaultText);
+               scope.text = scope.form && (scope.form.text || scope.form.schema && scope.form.schema.default);
             }
          };
       }).directive('nwpHeading', function () {
@@ -126,7 +110,7 @@
             scope:    true,
             require:  'ngModel',
             link:     function (scope, element, attrs, ngModel) {
-               scope.heading = scope.form && (scope.form.heading || scope.form.schema && scope.form.schema.defaultHeading);
+               scope.heading = scope.form && (scope.form.heading || scope.form.schema && scope.form.schema.default);
             }
          };
       }).directive('nwpAccordion', function () {
@@ -135,7 +119,7 @@
             scope:    true,
             require:  'ngModel',
             link:     function (scope, element, attrs, ngModel) {
-               scope.heading = scope.form && (scope.form.heading || scope.form.schema && scope.form.schema.defaultHeading);
+               scope.heading = scope.form && (scope.form.heading || scope.form.schema && scope.form.schema.default);
                scope.closeOthers      = scope.form && scope.form.closeOthers || false;
                scope.showChapter      = scope.form && scope.form.showChapter || true;
             }
