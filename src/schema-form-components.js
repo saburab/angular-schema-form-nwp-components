@@ -119,7 +119,7 @@
             scope:    true,
             require:  'ngModel',
             link:     function (scope, element, attrs, ngModel) {
-               scope.heading = scope.form && (scope.form.heading || scope.form.schema && scope.form.schema.default);
+               scope.text = scope.form && (scope.form['x-schema-form'] && scope.form['x-schema-form'].text || scope.form.schema && scope.form.schema.default);
                scope.closeOthers      = scope.form && scope.form.closeOthers || false;
                scope.showChapter      = scope.form && scope.form.showChapter || true;
             }

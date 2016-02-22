@@ -3,7 +3,7 @@
       <accordion-heading>
          <div class="heading-content">
             <i class="fa fa-fw" ng-class="{'fa-caret-down': showChapter, 'fa-caret-right': !showChapter}" fw="fw"></i>
-            {{ heading || accordionGroup.title || 'Undefined title' | translate }}</div>
+            {{ text || 'Undefined title' | translate }}</div>
       </accordion-heading>
       <bootstrap-decorator ng-repeat="item in accordionGroup.items" form="item"></bootstrap-decorator>
    </accordion-group>
