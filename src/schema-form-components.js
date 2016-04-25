@@ -116,7 +116,6 @@
       }).directive('nwpAccordion', function () {
          return {
             restrict: 'A',
-            scope:    true,
             require:  'ngModel',
             link:     function (scope, element, attrs, ngModel) {
                scope.text = scope.form && (scope.form['x-schema-form'] && scope.form['x-schema-form'].text || scope.form.schema && scope.form.schema.default);
