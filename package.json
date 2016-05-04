@@ -1,6 +1,6 @@
 {
   "name": "angular-schema-form-nwp-components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Common web elements for Angular Schema Form",
   "main": "dist/schema-form-components.min.js",
   "devDependencies": {

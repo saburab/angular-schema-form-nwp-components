@@ -8,7 +8,7 @@
             "title":           "modules.objects.components.accordion",
             "type":            "accordion",
             "format":          "nwpAccordion",
-            "accordionGroups": [
+            "tabs": [
                {
                   "title": "Simple stuff",
                   "items": []

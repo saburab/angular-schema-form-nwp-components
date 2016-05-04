@@ -1,5 +1,5 @@
 <uib-accordion nwp-accordion="form" ng-model="$$value$$" ng-init="selected = { acc: 0 }" close-others="{{ form.closeOthers }}" class="{{ form.fieldHtmlClass }}">
-   <uib-accordion-group is-open="true" ng-repeat="accordionGroup in form.accordionGroups">
+   <uib-accordion-group is-open="true" ng-repeat="accordionGroup in form.tabs">
       <uib-accordion-heading>
          <div class="heading-content" ng-click="showChapter=!showChapter">
             <i class="fa fa-fw" ng-class="{'fa-caret-down': showChapter, 'fa-caret-right': !showChapter}" fw="fw"></i>
